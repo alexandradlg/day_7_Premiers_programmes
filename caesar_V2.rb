@@ -19,22 +19,33 @@ def shift(array_n,shift) #fonction pour faire le shift dans ASCII
   noshift_1 = [*32..64] 
   noshift_2 = [*91..96]
   noshift_3 = [*123..126]
+  majuscule = [*65..90]
   noshift_full = noshift_1 + noshift_2 + noshift_3 #Tout les noshift correspondent aux ASCII number des caractère que l'on ne veut pas changer.
   array_s = [] #on créé une nouvelle array pour la remplir après
 
   array_n.each { |y|
     case
     when noshift_full.include?(y) #si le numéro ASCII est dans noshift, on ne décale pas
-      array_s.push(y) #on push dans le nouvel array
-    when y == 90 # Pour boucler de Z à A
-      y = 65 + shift - 1 # 65 en ASCII c'est A, on fait le shift, mais comme on a déjà décalé on enlève 1
-      array_s.push(y)
-    when y == 122 # Pour boucler de z à a
-      y = 97 + shift - 1 # 97 en ASCII c'est a, on fait le shift, mais comme on a déjà décalé on enlève 1
-      array_s.push(y)     
+      array_s.push(y) #On push dans le nouvel array   
     else 
-      y = y + shift #on shift tout les autres caractere
-      array_s.push(y)
+      k = y + shift #On shift tout les autres caracteres
+      if majuscule.include?(y) #On check si la lettre est un majuscule
+        case
+        when k >= 90
+          k = 64 + ((k - 90) % 26) # Ici c'est le calcul qui permet de faire un décalage de 500 si on veux, comme y'a module, on reste dans les clous.
+          array_s.push(k) #Slack moi pour les explications!
+        else
+          array_s.push(k)
+        end
+      else
+        case
+        when k >= 122 
+          k = 96 + ((k - 122) % 26) # Ici c'est le calcul qui permet de faire un décalage de 500 si on veux, comme y'a module, on reste dans les clous.
+          array_s.push(k) #Slack moi pour les explications!
+        else
+          array_s.push(k)
+        end
+      end
     end
   }
   return array_s
