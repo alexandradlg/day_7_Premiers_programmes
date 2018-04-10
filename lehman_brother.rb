@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # def trader_du_dimanche(array)
 #   day_to_buy = array.min
 #   position_day_to_buy = array.index(array.min) + 1
@@ -35,3 +36,5 @@ stock_picker([17,3,6,9,15,8,6,1,10])
 
 
   
+=======
+>>>>>>> 05bd90af9dfe6dc0f440a18b5d006f7e745d36ea

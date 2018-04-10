@@ -1,12 +1,18 @@
 # DAY 7
 Liste Exercice :
-1. Multiple
+1. Multiples
 2. Caesar
   Ici il y a 2 versions qui marchent toutes les deux. Chacun a fait la sienne.
 3. Lehman Brother
 4. Google
   Faire attention quand vous faites tourner le script.
   Changer ou commenter quelle fonction vous voulez faire tourner.
+5. Shakespeare
+  Faire attention quand vous faites tourner le script.
+  Changer ou commenter quelle fonction vous voulez faire tourner.
+  Il y a plusieurs fichier shakespeare ==> celui avec l'exercice est shakespeare.rb. 
+  Le second est le ficher .txt contenant le texte.
+  
 
 
 
