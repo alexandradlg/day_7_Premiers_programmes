@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-# def trader_du_dimanche(array)
-#   day_to_buy = array.min
-#   position_day_to_buy = array.index(array.min) + 1
-#   day_to_sell = (array[position_day_to_buy .. (array.index(array.last))]).max
-#   position_day_to_sell = array.index(day_to_sell) + 1
-#   puts "Buy at day #{position_day_to_buy} at the price of #{day_to_buy}"
-#   puts"Sell at day #{position_day_to_sell} at the price of #{day_to_sell}"
-# end
 def stock_picker(prices)
   # On pose toutes les variables dont on va avoir besoin à 0
   day_to_buy = 0
@@ -32,9 +23,3 @@ def stock_picker(prices)
 end
 
 stock_picker([17,3,6,9,15,8,6,1,10])
-
-
-
-  
-=======
->>>>>>> 05bd90af9dfe6dc0f440a18b5d006f7e745d36ea
